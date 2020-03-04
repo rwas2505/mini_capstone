@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     get "/home" => "products#home"
+    get "/watch" => "products#watch"
   end
 end
