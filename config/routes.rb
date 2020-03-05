@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   namespace :api do
     get "/home" => "products#home"
     get "/watch" => "products#watch"
+    get "/display_product/:id" => "products#product"
+    get "/display_product" => "products#query"
+    
   end
 end
