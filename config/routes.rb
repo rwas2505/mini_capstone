@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get "/home" => "products#home"
     get "/watch" => "products#watch"
     get "/display_product/:id" => "products#product"
-    get "/display_product" => "products#query"
+    get "/display_product" => "products#product"
     
   end
 end
