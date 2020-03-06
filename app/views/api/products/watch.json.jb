@@ -1,6 +1,0 @@
-{
-  
-  name: @watch.name,
-  price: @watch.price,
-  description: @watch.description
-}

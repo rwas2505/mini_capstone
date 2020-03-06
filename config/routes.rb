@@ -8,10 +8,8 @@ Rails.application.routes.draw do
   # end
 
   namespace :api do
-    get "/home" => "products#home"
-    get "/watch" => "products#watch"
-    get "/display_product/:id" => "products#product"
-    get "/display_product" => "products#product"
-    
+    get "/products" => "products#index"
+    get "/products/:id" => "products#show"
+    post "/products" => "products#create"
   end
 end
