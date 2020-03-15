@@ -1,1 +1,1 @@
-{message: "Suppliers destroy page"}
+{message: "You have removed #{@supplier.name.upcase}, ID: #{@supplier.id}, from the Suppliers DB"}

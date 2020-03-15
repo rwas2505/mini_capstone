@@ -1,1 +1,1 @@
-{message: "This product has hopefully been destroyed..."}
+{message: "You have removed #{@product.name.upcase}, ID: #{@product.id}, from the Products DB"}
