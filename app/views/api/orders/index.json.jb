@@ -1,0 +1,13 @@
+@orders.map do |order|
+{
+  order_id: order.id,
+  user_id: order.user_id,
+  user_email: current_user.email,
+  product_id: order.product_id,
+  product_quantity: order.quantity,
+  subtotal: order.subtotal,
+  tax: order.tax,
+  total: order.total
+}
+end
+

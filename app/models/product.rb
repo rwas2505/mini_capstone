@@ -8,16 +8,17 @@ class Product < ApplicationRecord
 
   #the below pieces of code do the same thing as the supplier and images methods
   
-  # has_many :images
-  # belongs_to :supplier
+  has_many :orders
+  has_many :images
+  belongs_to :supplier
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
 
-  def images 
-    Image.where(product_id: id)
-  end
+  # def images 
+  #   Image.where(product_id: id)
+  # end
 
   def is_discounted?
     price < 10
