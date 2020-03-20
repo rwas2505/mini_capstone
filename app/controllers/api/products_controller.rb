@@ -8,6 +8,11 @@ class Api::ProductsController < ApplicationController
       @products = @products.where("price < 10")
     end
 
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @products = category.products
+    end 
+
     if params[:sort] && params[:sort_order]
       @products = @products.order(params[:sort] => params[:sort_order])
     else
@@ -30,6 +35,7 @@ class Api::ProductsController < ApplicationController
       price: params[:price],
       image_url: params[:image_url],
       description: params[:description]
+    
     )
 
     if @product.save 

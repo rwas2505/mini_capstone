@@ -7,5 +7,10 @@
   total: product.total,
   is_discounted?: product.is_discounted?,
   supplier: product.supplier,
-  images: product.images
-}
+  # images: product.images,
+  categories: 
+    product.categories.map do |category|
+      category.name
+    end
+  
+} 
