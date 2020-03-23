@@ -1,6 +1,6 @@
 {
   order_id: @order.id,
-  user: current_user.name,
+  user_id: @order.user_id,
   product: @order.product.name,
   price: @order.product.price,
   quantity: @order.quantity,
