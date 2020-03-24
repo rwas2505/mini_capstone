@@ -8,11 +8,14 @@ class Product < ApplicationRecord
 
   #the below pieces of code do the same thing as the supplier and images methods
   
-  has_many :orders
+  # has_many :orders
   has_many :images
   belongs_to :supplier
   has_many :product_categories
   has_many :categories, through: :product_categories
+
+  has_many :carted_products
+  has_many :orders, through: :carted_products
 
   # def supplier
   #   Supplier.find_by(id: supplier_id)
