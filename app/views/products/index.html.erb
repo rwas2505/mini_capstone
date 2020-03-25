@@ -1,0 +1,14 @@
+<h1> 
+  This is the Products Index Page
+</h1>
+
+<h2>
+  Products
+</h2>
+
+<% @product.each do |product| %>
+<%= product.name %>
+<hr>
+<%end%>
+
+<img src="<%=@product.first.images[0].url%>">
