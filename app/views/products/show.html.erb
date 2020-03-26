@@ -3,6 +3,11 @@
   <%= @product.name %>
 </h2>
 
-<% if @product.images  %> 
-  <img src="<%=@product.images[0].url%>">
-<% end %>
+
+<a href="/products/<%= @product.id %>/edit"> Click to edit this product </a>
+<p>
+  <form action="/products/<%= @product.id %>" method="post">
+    <input type ="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete this product">
+  </form>
+</p>
