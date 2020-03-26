@@ -7,8 +7,10 @@
 </h2>
 
 <% @product.each do |product| %>
-<%= product.name %>
+<a href="/products/<%=product.id%>"> <%= product.name %> </a>
 <hr>
 <%end%>
 
 <img src="<%=@product.first.images[0].url%>">
+
+
